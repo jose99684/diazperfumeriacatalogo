@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diaz perfumeria - Fragancias de Lujo</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Estilos para el botón flotante de WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #128c7e;
+            transform: scale(1.1);
+            color: #FFF;
+            text-decoration: none;
+        }
+
+        /* Animación de pulso */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        /* Tooltip */
+        .whatsapp-float::before {
+            content: "¡Contáctanos!";
+            position: absolute;
+            right: 70px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #333;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            font-family: Arial, sans-serif;
+        }
+
+        .whatsapp-float::after {
+            content: "";
+            position: absolute;
+            right: 62px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 6px solid transparent;
+            border-left-color: #333;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover::before,
+        .whatsapp-float:hover::after {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 768px) {
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 25px;
+            }
+            
+            .whatsapp-float::before {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar2">
+            <a href="#" class="logo">
+                <img src="images/logo.png" alt="Logo Diaz Perfumería" class="logo-img">
+            </a>
+        </nav>
+            <nav class="navbar">
+            <ul class="nav-links">
+              <li><a href="index.html">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#categorias">Categorías</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+        </nav>
+    </header>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+    <!-- Hero Section -->
+    <section class="hero-slider" id="inicio">
+        <div class="slides">
+          <a href="https://enlace1.com" class="slide active" style="background-image: url('images/EBdAfCZWwAIqN6S.png');"></a>
+          <a href="https://enlace2.com" class="slide" style="background-image: url('images/images.jpeg');"></a>
+          <a href="https://enlace3.com" class="slide" style="background-image: url('images/images (1).jpeg');"></a>
+        </div>
+      
+        <!-- Flechas -->
+        <button class="arrow prev">&#10094;</button>
+        <button class="arrow next">&#10095;</button>
+      
+        <div class="hero-overlay">
+          <div class="hero-content">
+            <h1>ESENCIAS QUE PERDURAN</h1>
+            <p>Fragancias sofisticadas y deliciosas que te acompañan todo el día.</p>
+            <a href="#productos" class="cta-button">Comprar Ahora</a>
+            <div class="offer-badge">
+              <p>Compra 2 unidades con 5% de descuento</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+
+      <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        const nextBtn = document.querySelector('.arrow.next');
+        const prevBtn = document.querySelector('.arrow.prev');
+      
+        function showSlide(index) {
+          slides.forEach((slide) => slide.classList.remove('active'));
+          slides[index].classList.add('active');
+        }
+      
+        function nextSlide() {
+          currentIndex = (currentIndex + 1) % totalSlides;
+          showSlide(currentIndex);
+        }
+      
+        function prevSlide() {
+          currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+          showSlide(currentIndex);
+        }
+      
+        // Evento de botones
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+      
+        // Cambio automático cada 8 segundos
+        setInterval(nextSlide, 8000);
+      </script>
+      
+      
+      
+
+      <section class="categories" id="categorias">
+        <h2 class="section-title">Nuestras Categorías</h2>
+        <div class="categories-grid">
+      
+          <div class="category-card">
+            <div class="category-icon">
+              <img src="images/hombres.jpg" alt="Hombre">
+            </div>
+            <h3>Hombre</h3>
+            <p>Fragancias masculinas con carácter y elegancia</p>
+            <a href="pages/hombres/hombre.html" class="category-button">Ver Ofertas</a>
+          
+
+
+          </div>
+      
+          <div class="category-card">
+            <div class="category-icon">
+              <img src="images/mujer.jpeg" alt="Mujer">
+            </div>
+            <h3>Mujer</h3>
+            <p>Perfumes femeninos sofisticados y cautivadores</p>
+            <a href="#" class="category-button">Ver Ofertas</a>
+          </div>
+      
+          <div class="category-card">
+            <div class="category-icon">
+              <img src="images/arabes.jpg" alt="Árabe">
+            </div>
+            <h3>Árabe</h3>
+            <p>Esencias orientales exóticas y misteriosas</p>
+            <a href="#" class="category-button">Ver Ofertas</a>
+          </div>
+      
+          <div class="category-card">
+            <div class="category-icon">
+              <img src="images/unisex.jpg" alt="Nicho">
+            </div>
+            <h3>Unisex</h3>
+            <p>Fragancias exclusivas y de edición limitada</p>
+            <a href="#" class="category-button">Ver Ofertas</a>
+          </div>
+      
+        </div>
+      </section>
+
+//*experiencias memorables*//
+
+
+<section class="experiencias" id="experiencias">
+    <h2 class="section-title">EXPERIENCIAS MEMORABLES</h2>
+    <div class="carousel-container">
+      <div class="carousel-track">
+  
+        <!-- Ejemplo de testimonio -->
+        <div class="carousel-item" onclick="abrirModal('video1.mp4', 'Contratipo Light Blue', 'Light Blue pour Homme es una fragancia cítrica aromática...')">
+          <video src="videos/video1.mp4" muted loop playsinline></video>
+          <p class="nombre-testimonio">Cliente Feliz</p>
+        </div>
+  
+        <div class="carousel-item" onclick="abrirModal('video2.mp4', 'Cubano Paisa', 'El resultado del producto fue espectacular...')">
+          <video src="videos/video2.mp4" muted loop playsinline></video>
+          <p class="nombre-testimonio">Parceros</p>
+        </div>
+  
+        <!-- Más items según necesites -->
+  
+      </div>
+  
+      <!-- Flechas -->
+      <button class="carousel-btn left" onclick="moverCarrusel(-1)">&#10094;</button>
+      <button class="carousel-btn right" onclick="moverCarrusel(1)">&#10095;</button>
+    </div>
+  </section>
+  
+
+  <div id="modalTestimonio" class="modal">
+    <div class="modal-content">
+      <span class="cerrar-modal" onclick="cerrarModal()">&times;</span>
+      <div class="modal-body">
+        <video id="modalVideo" controls></video>
+        <div class="modal-info">
+          <h3 id="modalTitulo"></h3>
+          <p id="modalDescripcion"></p>
+          <button class="cta-button">Agregar al Carrito</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <script>
+    let currentSlide = 0;
+  
+    function moverCarrusel(direccion) {
+      const track = document.querySelector('.carousel-track');
+      const items = document.querySelectorAll('.carousel-item');
+      const total = items.length;
+  
+      currentSlide += direccion;
+      if (currentSlide < 0) currentSlide = total - 1;
+      if (currentSlide >= total) currentSlide = 0;
+  
+      const offset = -items[0].offsetWidth * currentSlide;
+      track.style.transform = `translateX(${offset}px)`;
+    }
+  
+    function abrirModal(videoSrc, titulo, descripcion) {
+      document.getElementById('modalVideo').src = videoSrc;
+      document.getElementById('modalTitulo').textContent = titulo;
+      document.getElementById('modalDescripcion').textContent = descripcion;
+      document.getElementById('modalTestimonio').style.display = 'block';
+    }
+  
+    function cerrarModal() {
+      document.getElementById('modalTestimonio').style.display = 'none';
+      document.getElementById('modalVideo').pause();
+    }
+  </script>
+  
+      
+      
+
+    <!-- Products Section -->
+    <section class="products" id="productos">
+        <div class="products-container">
+          <h2 class="section-title">Más Vendidos</h2>
+          <div class="products-grid">
+      
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/producto1.jpg" alt="Classic">
+              </div>
+              <div class="product-info">
+                <h3>Classic</h3>
+                <div class="product-price">$89.900</div>
+                <p class="product-description">Fragancia clásica con notas frescas y duraderas. Perfecta para uso diario.</p>
+                <button class="add-to-cart" onclick="addToCart('Classic', 89900)">Agregar al Carrito</button>
+              </div>
+            </div>
+      
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/producto2.jpg" alt="Premium">
+              </div>
+              <div class="product-info">
+                <h3>Premium</h3>
+                <div class="product-price">$129.900</div>
+                <p class="product-description">Fragancia premium con mezcla única de esencias exóticas y elegantes.</p>
+                <button class="add-to-cart" onclick="addToCart('Premium', 129900)">Agregar al Carrito</button>
+              </div>
+            </div>
+      
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/producto3.jpg" alt="Royal">
+              </div>
+              <div class="product-info">
+                <h3>Royal</h3>
+                <div class="product-price">$179.900</div>
+                <p class="product-description">La fragancia más exclusiva con notas orientales y toques sofisticados.</p>
+                <button class="add-to-cart" onclick="addToCart('Royal', 179900)">Agregar al Carrito</button>
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      </section>
+      
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/573001234567?text=Hola!%20Me%20interesa%20conocer%20más%20sobre%20sus%20fragancias" 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       title="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">Sobre Nosotros</a>
+                <a href="#">Política de Privacidad</a>
+                <a href="#">Términos y Condiciones</a>
+                <a href="#">Envíos</a>
+                <a href="#">Contacto</a>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p>&copy; Diaz Perfumería. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

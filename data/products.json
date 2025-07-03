@@ -1,0 +1,40 @@
+{
+    "bestsellers": [
+      {
+        "id": 1,
+        "name": "Contratipo (Light Blue pour Homme)",
+        "price": 129900,
+        "originalPrice": 150000,
+        "image": "./assets/images/products/light-blue.jpg",
+        "category": "hombre",
+        "description": "Fragancia fresca y masculina inspirada en Light Blue pour Homme",
+        "notes": ["Bergamota", "Pomelo", "Enebro", "Romero"],
+        "inStock": true
+      },
+      {
+        "id": 2,
+        "name": "Contratipo (Chez Bond)",
+        "price": 129900,
+        "originalPrice": 150000,
+        "image": "./assets/images/products/chez-bond.jpg",
+        "category": "hombre",
+        "description": "Elegancia y sofisticación en cada spray",
+        "notes": ["Lavanda", "Vainilla", "Ámbar", "Sándalo"],
+        "inStock": true
+      }
+    ],
+    "newLaunches": [
+      {
+        "id": 10,
+        "name": "Nueva Fragancia Primavera",
+        "price": 149900,
+        "originalPrice": 170000,
+        "image": "./assets/images/products/spring.jpg",
+        "category": "unisex",
+        "description": "Fragancia fresca para la nueva temporada",
+        "notes": ["Flores blancas", "Cítricos", "Musgo", "Cedro"],
+        "inStock": true,
+        "isNew": true
+      }
+    ]
+  }

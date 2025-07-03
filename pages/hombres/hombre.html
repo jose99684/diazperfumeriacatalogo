@@ -1,0 +1,1969 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fragancias para Hombre - Diaz Perfumería</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Variables CSS */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --bg-color: #f8f9fa;
+            --white: #ffffff;
+            --light-gray: #ecf0f1;
+            --shadow: 0 4px 15px rgba(0,0,0,0.1);
+            --border-radius: 12px;
+            --transition: all 0.3s ease;
+        }
+
+        /* Reset y Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #000000f2;
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(253, 253, 253, 0.932);
+          }
+        .navbar2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 10px 20px;
+            gap: 50px;
+          }
+
+      /* Logo */
+            .logo-img {
+                height: 120px;
+                width: auto;
+            }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+            padding: 5px 10px;
+            gap: 100px;
+          }
+          
+
+          .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+          }
+
+          .nav-links a {
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+            background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20210812/pngtree-abstract-gradient-light-golden-background-image_760754.jpg');
+            background-size: cover;
+            background-position: center;
+            
+            /* Estas propiedades hacen el "clip" */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          
+            /* Compatibilidad adicional */
+            background-clip: text;
+            color: transparent;
+            transition: all 0.3s ease;
+          }
+          
+          .nav-links a:hover {
+            filter: brightness(1.3);
+          }
+          
+          
+          .nav-links a:hover {
+            filter: brightness(1.3);
+          }
+          
+
+          .nav-links a:hover {
+            color: #ccc;
+          }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-color);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .cart-icon {
+            color: white;
+            position: relative;
+            font-size: 20px;
+          }
+
+        .cart-icon:hover {
+            color: var(--secondary-color);
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--accent-color);
+            color: var(--white);
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .page-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .page-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Search and Filter Section */
+        .search-filter-section {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 3rem;
+            color: #2980b9;
+
+        }
+
+        .search-container {
+            margin-bottom: 2rem;
+        }
+
+        .search-input {
+            width: 100%;
+            max-width: 500px;
+            padding: 1rem 1.5rem;
+            border: 2px solid var(--light-gray);
+            border-radius: 50px;
+            font-size: 1rem;
+            transition: var(--transition);
+            background: var(--bg-color);
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+        }
+
+        .filter-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .filter-group {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .filter-label {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .filter-select {
+            padding: 0.75rem 1rem;
+            border: 2px solid var(--light-gray);
+            border-radius: var(--border-radius);
+            background: var(--white);
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .filter-select:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+        }
+
+        .products-count {
+            font-weight: 600;
+            color: var(--text-color);
+            background: var(--light-gray);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 3rem;
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+        }
+
+        /* Products Grid */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+
+        .product-image {
+            position: relative;
+            height: 280px;
+            overflow: hidden;
+            background: var(--light-gray);
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .offer-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: var(--accent-color);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            z-index: 2;
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .product-price {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .current-price {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+
+        .original-price {
+            font-size: 1rem;
+            color: #999;
+            text-decoration: line-through;
+        }
+
+        .product-description {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .add-to-cart {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, var(--secondary-color), #2980b9);
+            color: var(--white);
+            border: none;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .add-to-cart:hover {
+            background: linear-gradient(135deg, #2980b9, var(--secondary-color));
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        .add-to-cart:active {
+            transform: translateY(0);
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 3rem;
+            color: #666;
+        }
+
+        .no-results i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #ccc;
+        }
+
+        /* Modal/Popup Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 10000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background-color: var(--white);
+            margin: 2% auto;
+            padding: 0;
+            border-radius: var(--border-radius);
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid var(--light-gray);
+            background: linear-gradient(135deg, var(--primary-color), #34495e);
+            color: var(--white);
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+        }
+
+        .modal-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .close {
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 0;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .close:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .modal-body {
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .modal-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .modal-details h3 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .modal-price {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-current-price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+
+        .modal-original-price {
+            font-size: 1.2rem;
+            color: #999;
+            text-decoration: line-through;
+        }
+
+     /* REEMPLAZA la clase .modal-description existente por esta versión mejorada */
+
+.modal-description {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    
+    /* Configuración del scroll */
+    max-height: 200px;
+    overflow-y: auto;
+    
+    /* Estilo del scrollbar personalizado */
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e0 #f7fafc;
+}
+
+/* Scrollbar personalizado para webkit (Chrome, Safari, Edge) */
+.modal-description::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-description::-webkit-scrollbar-track {
+    background: #f7fafc;
+    border-radius: 4px;
+}
+
+.modal-description::-webkit-scrollbar-thumb {
+    background: #cbd5e0;
+    border-radius: 4px;
+    transition: background 0.2s ease;
+}
+
+.modal-description::-webkit-scrollbar-thumb:hover {
+    background: #a0aec0;
+}
+
+/* Indicador visual para texto largo */
+.modal-description::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: linear-gradient(transparent, rgba(255, 255, 255, 0.8));
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal-description.has-scroll::after {
+    opacity: 1;
+}
+
+/* Asegurar que el contenedor de detalles mantenga su estructura */
+.modal-details {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Responsive - altura menor en móviles */
+@media (max-width: 768px) {
+    .modal-description {
+        max-height: 150px;
+    }
+}
+
+        .modal-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .modal-btn {
+            flex: 1;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .modal-btn-primary {
+            background: linear-gradient(135deg, var(--secondary-color), #2980b9);
+            color: var(--white);
+        }
+
+        .modal-btn-primary:hover {
+            background: linear-gradient(135deg, #2980b9, var(--secondary-color));
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        .modal-btn-secondary {
+            background: #25d366;
+            color: var(--white);
+        }
+
+        .modal-btn-secondary:hover {
+            background: #128c7e;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        /* WhatsApp Float Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: var(--white);
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #128c7e;
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        footer {
+            background: #020202;
+            color: white;
+            padding: 3rem 2rem 1rem;
+            text-align: center;
+          }
+
+          /* Imagen dorada */
+            :root {
+                --gold-image: url('https://png.pngtree.com/thumb_back/fh260/background/20210812/pngtree-abstract-gradient-light-golden-background-image_760754.jpg');
+            }
+  
+          
+          .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+          }
+          
+          .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        
+          }
+          
+          .footer-links a {
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            background-image: var(--gold-image);
+            background-size: cover;
+            background-position: center;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            transition: all 0.3s ease;
+          }
+          
+          
+          .footer-links a:hover {
+            color: #e74c3c;
+          }
+          
+          .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+          }
+          
+          .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background: #141618;
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: all 0.3s;
+          }
+          
+          .social-icons a:hover {
+            background: #e74c3c;
+            transform: translateY(-2px);
+          }
+          
+          /* Animations */
+          @keyframes fadeInUp {
+            from {
+              opacity: 0;
+              transform: translateY(30px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+          
+          /* Responsive Design */
+          @media (max-width: 768px) {
+            .nav-links {
+              display: none;
+            }
+          
+            .hero h1 {
+              font-size: 2.5rem;
+            }
+          
+            .hero p {
+              font-size: 1rem;
+            }
+          
+            .categories-grid {
+              grid-template-columns: 1fr;
+            }
+          
+            .products-grid {
+              grid-template-columns: 1fr;
+            }
+          
+            .footer-links {
+              flex-direction: column;
+              gap: 1rem;
+            }
+          }
+          
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-icons a i {
+            background-image: var(--gold-image);
+            background-size: cover;
+            background-position: center;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+          }
+
+        .social-icons a:hover {
+            color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .filter-section {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .filter-group {
+                justify-content: space-between;
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: 1.5rem;
+            }
+
+            .main-content {
+                padding: 1rem;
+            }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 24px;
+            }
+
+            .modal-content {
+                width: 95%;
+                margin: 5% auto;
+            }
+
+            .modal-body {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .modal-image {
+                height: 300px;
+            }
+
+            .modal-actions {
+                flex-direction: column;
+            }
+
+.product-header {
+    margin-bottom: 1rem;
+}
+
+.product-body {
+    margin-bottom: 1rem;
+    min-height: 80px;
+}
+
+.product-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar2">
+            <a href="#" class="logo">
+                <img src="images/LOGO PERFUME.jpg" alt="Logo Diaz Perfumería" class="logo-img">
+            </a>
+        </nav>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li></li><a href="../../index.html">Inicio</a></li>
+                <li><a href="index.html#productos">Productos</a></li>
+                <li><a href="index.html#categorias">Categorías</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+            <div class="cart-icon" onclick="showCart()">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Page Header -->
+        <div class="page-header">
+            <h1 class="page-title">Fragancias para Hombre</h1>
+            <p class="page-subtitle">Descubre nuestra exclusiva colección de fragancias masculinas. Aromas sofisticados que definen tu personalidad y estilo único.</p>
+        </div>
+
+        <!-- Search and Filter Section -->
+        <div class="search-filter-section">
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-input" placeholder="🔍 Buscar por nombre de fragancia...">
+            </div>
+            
+            <div class="filter-section">
+                <div class="filter-group">
+                    <span class="filter-label">Filtrar:</span>
+                    <select class="filter-select" id="disponibilidad">
+                        <option value="">Disponibilidad</option>
+                        <option value="disponible">En Stock</option>
+                        <option value="agotado">Agotado</option>
+                    </select>
+                    <select class="filter-select" id="precio">
+                        <option value="">Precio</option>
+                        <option value="menor">Menor a $90.000</option>
+                        <option value="medio">$90.000 - $95.000</option>
+                        <option value="mayor">Mayor a $95.000</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <span class="filter-label">Ordenar por:</span>
+                    <select class="filter-select" id="ordenar">
+                        <option value="nombre">Alfabético A-Z</option>
+                        <option value="precio-menor">Precio: menor a mayor</option>
+                        <option value="precio-mayor">Precio: mayor a menor</option>
+                    </select>
+                </div>
+                <div class="products-count" id="productCount">Cargando productos...</div>
+            </div>
+        </div>
+
+        <!-- Loading -->
+        <div id="loading" class="loading">
+            <i class="fas fa-spinner fa-spin"></i> Cargando fragancias...
+        </div>
+
+        <!-- Products Grid -->
+        <div id="productContainer" class="products-grid" style="display: none;"></div>
+
+        <!-- No Results -->
+        <div id="noResults" class="no-results" style="display: none;">
+            <i class="fas fa-search"></i>
+            <h3>No se encontraron productos</h3>
+            <p>Intenta con otros términos de búsqueda o ajusta los filtros</p>
+        </div>
+    </main>
+
+    <!-- Modal de Producto -->
+<div id="productModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title" id="modalTitle">Detalle del Producto</h2>
+            <button class="close" onclick="closeModal()">&times;</button>
+        </div>
+        <div class="modal-body">
+            <img id="modalImage" class="modal-image" src="" alt="">
+            <div class="modal-details">
+                <h3 id="modalName"></h3>
+                <div class="modal-price">
+                    <span class="modal-current-price" id="modalCurrentPrice"></span>
+                    <span class="modal-original-price" id="modalOriginalPrice" style="display: none;"></span>
+                </div>
+                <p class="modal-description" id="modalDescription"></p>
+                
+                <!-- Notas de Fragancia -->
+                <div class="fragrance-notes">
+                    <div id="modalNotasSalida" class="note-section" style="display: none;">
+                        <h4><i class="fas fa-leaf"></i> Notas de Salida</h4>
+                        <p id="notasSalidaText"></p>
+                    </div>
+                    <div id="modalNotasCorazon" class="note-section" style="display: none;">
+                        <h4><i class="fas fa-heart"></i> Notas de Corazón</h4>
+                        <p id="notasCorazonText"></p>
+                    </div>
+                    <div id="modalNotasFondo" class="note-section" style="display: none;">
+                        <h4><i class="fas fa-anchor"></i> Notas de Fondo</h4>
+                        <p id="notasFondoText"></p>
+                    </div>
+                </div>
+                
+                <div class="modal-actions">
+                    <button class="modal-btn modal-btn-primary" onclick="addToCartFromModal()">
+                        <i class="fas fa-shopping-cart"></i> Agregar al Carrito
+                    </button>
+                    <button class="modal-btn modal-btn-secondary" onclick="contactWhatsAppFromModal()">
+                        <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/573001234567?text=Hola!%20Me%20interesa%20conocer%20más%20sobre%20las%20fragancias%20para%20hombre" 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       title="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">Sobre Nosotros</a>
+                <a href="#">Política de Privacidad</a>
+                <a href="#">Términos y Condiciones</a>
+                <a href="#">Envíos</a>
+                <a href="#">Contacto</a>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p>&copy; 2024 Diaz Perfumería. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Variables globales
+        let allProducts = [];
+        let filteredProducts = [];
+        let cart = [];
+
+        // URL del CSV de Google Sheets
+        const CSV_URL = "https://docs.google.com/spreadsheets/d/1Z5ydY_7nIGvKhxWhmgBMlQK5ozuQewb5LloPtGiJK_w/export?format=csv&gid=0";
+
+        // Elementos del DOM
+        const container = document.getElementById("productContainer");
+        const searchInput = document.getElementById("searchInput");
+        const loading = document.getElementById("loading");
+        const noResults = document.getElementById("noResults");
+        const productCount = document.getElementById("productCount");
+
+        // Inicializar aplicación
+        document.addEventListener("DOMContentLoaded", initApp);
+
+        async function initApp() {
+            try {
+                await loadProducts();
+                setupEventListeners();
+            } catch (error) {
+                console.error("Error al inicializar:", error);
+                showError("Error al cargar los productos. Por favor, recarga la página.");
+            }
+        }
+
+        // Cargar productos desde Google Sheets
+        async function loadProducts() {
+            try {
+                const response = await fetch(CSV_URL);
+                const csvText = await response.text();
+                allProducts = parseCSV(csvText);
+                filteredProducts = [...allProducts];
+                renderProducts(filteredProducts);
+                updateProductCount();
+                hideLoading();
+            } catch (error) {
+                console.error("Error cargando productos:", error);
+                showError("Error al cargar los productos desde Google Sheets");
+            }
+        }
+
+        // Parsear CSV
+        function parseCSV(csvText) {
+            const lines = csvText.trim().split('\n');
+            if (lines.length < 2) return [];
+            
+            const headers = lines[0].split(',').map(h => h.trim().replace(/"/g, ''));
+            const products = [];
+            
+            for (let i = 1; i < lines.length; i++) {
+                const values = lines[i].split(',').map(v => v.trim().replace(/"/g, ''));
+                if (values.length >= headers.length) {
+                    const product = {};
+                    headers.forEach((header, index) => {
+                        product[header] = values[index] || '';
+                    });
+                    
+                    // Solo agregar productos con nombre
+                    if (product.Nombre && product.Nombre.trim() !== '') {
+                        products.push(product);
+                    }
+                }
+            }
+            
+            return products;
+        }
+
+
+
+
+        // Renderizar productos
+        function renderProducts(products) {
+            if (products.length === 0) {
+                showNoResults();
+                return;
+            }
+            
+            hideNoResults();
+            container.innerHTML = '';
+            
+            products.forEach((product, index) => {
+                const card = createProductCard(product, index);
+                container.appendChild(card);
+            });
+        }
+
+
+// Función mejorada para procesar imágenes de Google Drive
+function processUniversalImage(rawUrl) {
+    if (!rawUrl || rawUrl.trim() === '' || rawUrl === 'undefined' || rawUrl === 'null') {
+        return 'https://via.placeholder.com/300x300/f0f0f0/666666?text=Sin+Imagen';
+    }
+
+    const url = rawUrl.trim();
+
+    // Validar que no sean valores extraños como números
+    if (/^\d+$/.test(url) || url.length < 10) {
+        return 'https://via.placeholder.com/300x300/f0f0f0/666666?text=Sin+Imagen';
+    }
+
+    // 1. DATA URI (imagen base64 insertada directamente)
+    if (url.startsWith('data:image/')) {
+        return url;
+    }
+
+    // 2. Google Drive - múltiples formatos
+    let fileId = null;
+
+    // Formato: https://drive.google.com/file/d/FILE_ID/view?usp=sharing
+    if (url.includes('/file/d/')) {
+        const match = url.match(/\/file\/d\/([a-zA-Z0-9-_]{25,})/);
+        if (match) fileId = match[1];
+    } 
+    // Formato: https://drive.google.com/open?id=FILE_ID
+    else if (url.includes('open?id=')) {
+        const match = url.match(/open\?id=([a-zA-Z0-9-_]{25,})/);
+        if (match) fileId = match[1];
+    }
+    // Formato: Solo el ID (debe tener al menos 25 caracteres)
+    else if (url.match(/^[a-zA-Z0-9-_]{25,}$/)) {
+        fileId = url;
+    }
+    // Formato: Ya es enlace directo de Drive
+    else if (url.includes('drive.google.com/uc?')) {
+        // Extraer el ID del enlace existente para recrearlo
+        const match = url.match(/id=([a-zA-Z0-9-_]{25,})/);
+        if (match) fileId = match[1];
+        else return url; // Si no podemos extraer el ID, usar tal como está
+    }
+
+    // Si encontramos un ID de Drive, crear enlace directo optimizado
+    if (fileId && fileId.length >= 25) {
+        // Usar formato más confiable para imágenes públicas
+        return `https://lh3.googleusercontent.com/d/${fileId}=s800-c`;
+    }
+
+    // 3. Enlace HTTP(S) válido (imágenes externas)
+    if (url.startsWith('http') && (url.includes('.jpg') || url.includes('.jpeg') || url.includes('.png') || url.includes('.gif') || url.includes('.webp'))) {
+        return url;
+    }
+
+    // 4. Enlace relativo (imágenes locales)
+    if (!url.startsWith('http') && !url.startsWith('data:') && (url.includes('.jpg') || url.includes('.jpeg') || url.includes('.png') || url.includes('.gif'))) {
+        return url;
+    }
+
+    // 5. No válida: usar imagen por defecto
+    console.warn('URL de imagen no válida:', url);
+    return 'https://via.placeholder.com/300x300/f0f0f0/666666?text=Imagen+No+Disponible';
+}
+
+// Función mejorada para manejar errores de carga de imagen (evita bucles infinitos)
+function handleImageError(imgElement, originalSrc) {
+    // Evitar bucle infinito - solo intentar una vez por imagen
+    if (imgElement.dataset.errorHandled === 'true') {
+        return;
+    }
+
+    console.warn('Error cargando imagen:', originalSrc);
+    imgElement.dataset.errorHandled = 'true';
+    
+    // Imagen SVG de respaldo que siempre funciona
+    const fallbackSvg = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjBmMGYwIiBzdHJva2U9IiNkZGQiIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjUwJSIgeT0iNDAlIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM5OTk5OTkiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkltYWdlbjwvdGV4dD48dGV4dCB4PSI1MCUiIHk9IjYwJSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBmaWxsPSIjOTk5OTk5IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5ObyBEaXNwb25pYmxlPC90ZXh0Pjwvc3ZnPg==';
+    
+    imgElement.src = fallbackSvg;
+    imgElement.alt = 'Imagen no disponible';
+}
+
+// Función mejorada para crear la tarjeta del producto
+/// Función para crear la tarjeta del producto
+function createProductCard(product, index) {
+    const card = document.createElement('div');
+    card.className = 'product-card';
+
+    const nombre = product.Nombre || 'Producto sin nombre';
+    const precio = extractPrice(product.Precio || '0');
+    const precioOriginal = extractPrice(product.Original || product['Precio Original'] || '0');
+    const descripcion = product.Descripción || product.Descripcion || 'Fragancia de alta calidad';
+
+    // Procesar imagen con función mejorada
+    let imagen = processUniversalImage(product.Imagen);
+    
+    // Debug: mostrar qué imagen se está procesando
+    console.log(`Procesando imagen para ${nombre}:`, {
+        original: product.Imagen,
+        procesada: imagen
+    });
+
+    const hasOffer = precioOriginal > precio;
+
+
+
+
+
+
+
+
+    // AQUÍ VA EL CÓDIGO HTML DE LA TARJETA
+    card.innerHTML = `
+    <div class="product-image" onclick="openProductModal(${index})">
+        ${hasOffer ? '<div class="offer-badge">Oferta</div>' : ''}
+        <img src="${imagen}" 
+             alt="${nombre}" 
+             loading="lazy"
+             style="width: 100%; height: 100%; object-fit: contain; object-position: center;"
+             onerror="handleImageError(this, '${imagen.replace(/'/g, "\\'")}')"
+             onload="console.log('Imagen cargada exitosamente:', '${nombre}')">
+    </div>
+    <div class="product-info">
+        <div class="product-header">
+            <h3 class="product-name" onclick="openProductModal(${index})">${nombre}</h3>
+            <div class="product-price">
+                <span class="current-price">$${precio.toLocaleString('es-CO')} COP</span>
+                ${hasOffer ? `<span class="original-price">$${precioOriginal.toLocaleString('es-CO')} COP</span>` : ''}
+            </div>
+        </div>
+        <div class="product-body">
+            <p class="product-description" style="
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                text-overflow: ellipsis;
+                line-height: 1.4;
+                max-height: 2.8em;
+            ">${descripcion}</p>
+        </div>
+        <div class="product-footer">
+            <button class="add-to-cart" onclick="addToCart('${nombre.replace(/'/g, "\\'")}', ${precio})">
+                <i class="fas fa-shopping-cart"></i> Agregar al Carrito
+            </button>
+        </div>
+    </div>
+`;
+
+    return card;
+}
+
+// Variable global para el modal
+let currentModalProduct = null;
+
+
+
+// AGREGAR este código dentro de la función openProductModal(), después de establecer la descripción
+
+// Función para configurar el scroll de la descripción
+function setupDescriptionScroll() {
+    const modalDescription = document.getElementById('modalDescription');
+    
+    // Verificar si el contenido es más largo que el contenedor
+    if (modalDescription.scrollHeight > modalDescription.clientHeight) {
+        modalDescription.classList.add('has-scroll');
+        
+        // Opcional: agregar indicador de scroll
+        const scrollIndicator = document.createElement('div');
+        scrollIndicator.style.cssText = `
+            position: absolute;
+            bottom: -10px;
+            right: 10px;
+            color: #999;
+            font-size: 12px;
+            font-style: italic;
+        `;
+        scrollIndicator.textContent = '↓ Desliza para ver más';
+        modalDescription.parentElement.style.position = 'relative';
+        modalDescription.parentElement.appendChild(scrollIndicator);
+        
+        // Ocultar indicador cuando se haga scroll hasta abajo
+        modalDescription.addEventListener('scroll', function() {
+            if (this.scrollTop + this.clientHeight >= this.scrollHeight - 5) {
+                scrollIndicator.style.opacity = '0';
+            } else {
+                scrollIndicator.style.opacity = '1';
+            }
+        });
+    } else {
+        modalDescription.classList.remove('has-scroll');
+    }
+}
+
+
+
+
+
+// Funciones del Modal - Versión corregida y debuggeada
+function openProductModal(productIndex) {
+    if (productIndex < 0 || productIndex >= filteredProducts.length) {
+        console.error('Índice de producto inválido:', productIndex);
+        return;
+    }
+
+    const product = filteredProducts[productIndex];
+    currentModalProduct = product;
+
+    console.log('Abriendo modal para:', product.Nombre, 'Descripción:', product.Descripción?.length || 0, 'chars');
+
+    // Llenar datos básicos del modal
+    document.getElementById('modalName').textContent = product.Nombre || 'Producto sin nombre';
+    document.getElementById('modalDescription').textContent = product.Descripción || product.Descripcion || 'Fragancia de alta calidad';
+    
+    // Procesar imagen ANTES de configurar scroll para evitar conflictos
+    const modalImage = document.getElementById('modalImage');
+    modalImage.src = processUniversalImage(product.Imagen);
+    modalImage.alt = product.Nombre || 'Producto';
+    modalImage.style.cssText = 'width: 100%; height: 100%; object-fit: contain; object-position: center; cursor: zoom-in;';
+    
+    // Manejar error de imagen con función mejorada
+    modalImage.onerror = function() { 
+        handlePermanentImageError(this, product.Imagen, product.Nombre); 
+    };
+    
+    // Configurar zoom en la imagen del modal
+    setupImageZoom(modalImage);
+
+    // Precios
+    const precio = extractPrice(product.Precio || '0');
+    const precioOriginal = extractPrice(product.Original || product['Precio Original'] || '0');
+    
+    document.getElementById('modalCurrentPrice').textContent = `${precio.toLocaleString('es-CO')} COP`;
+    
+    const modalOriginalPrice = document.getElementById('modalOriginalPrice');
+    if (precioOriginal > precio) {
+        modalOriginalPrice.textContent = `${precioOriginal.toLocaleString('es-CO')} COP`;
+        modalOriginalPrice.style.display = 'inline';
+    } else {
+        modalOriginalPrice.style.display = 'none';
+    }
+
+    // Mostrar modal
+    document.getElementById('productModal').style.display = 'block';
+    document.body.style.overflow = 'hidden'; // Prevenir scroll del body
+    
+    // Configurar scroll para descripción larga DESPUÉS de mostrar el modal
+    setTimeout(() => setupDescriptionScroll(), 150);
+}
+
+// Función de manejo de error de imagen que no depende de servicios externos
+function handlePermanentImageError(imgElement, originalSrc, productName) {
+    console.warn('Error cargando imagen:', originalSrc, 'para producto:', productName);
+    
+    // Evitar loops infinitos de error
+    if (imgElement.src.startsWith('data:image/svg+xml')) {
+        return;
+    }
+    
+    // Crear SVG placeholder directamente sin servicios externos
+    const svgPlaceholder = createLocalImagePlaceholder(productName);
+    imgElement.src = svgPlaceholder;
+    imgElement.alt = `Imagen no disponible - ${productName}`;
+    imgElement.classList.add('local-placeholder');
+    
+    // Remover el event handler para evitar loops
+    imgElement.onerror = null;
+}
+
+// Crear placeholder local usando SVG
+function createLocalImagePlaceholder(productName = 'Producto') {
+    const shortName = productName.length > 20 ? productName.substring(0, 17) + '...' : productName;
+    
+    const svgContent = `
+        <svg width="300" height="300" xmlns="http://www.w3.org/2000/svg" style="background: #f8f9fa;">
+            <!-- Fondo con gradiente sutil -->
+            <defs>
+                <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#f8f9fa;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#e9ecef;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+            
+            <rect width="100%" height="100%" fill="url(#bgGrad)" stroke="#dee2e6" stroke-width="1"/>
+            
+            <!-- Icono de imagen -->
+            <g transform="translate(150, 130)">
+                <!-- Marco de la imagen -->
+                <rect x="-40" y="-25" width="80" height="50" fill="none" stroke="#6c757d" stroke-width="2" rx="4"/>
+                <!-- Montañas -->
+                <polygon points="-30,15 -20,-5 -10,15 5,-10 20,15" fill="#6c757d" opacity="0.7"/>
+                <!-- Sol -->
+                <circle cx="15" cy="-15" r="6" fill="#6c757d" opacity="0.5"/>
+            </g>
+            
+            <!-- Texto del producto -->
+            <text x="150" y="180" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#495057">${shortName}</text>
+            <text x="150" y="200" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#6c757d">Imagen no disponible</text>
+            
+            <!-- Icono decorativo de fragancia -->
+            <g transform="translate(150, 240)" opacity="0.3">
+                <circle cx="0" cy="0" r="8" fill="none" stroke="#6c757d" stroke-width="1"/>
+                <circle cx="-10" cy="-5" r="3" fill="#6c757d" opacity="0.5"/>
+                <circle cx="8" cy="-8" r="4" fill="#6c757d" opacity="0.3"/>
+                <circle cx="5" cy="8" r="2" fill="#6c757d" opacity="0.7"/>
+            </g>
+        </svg>
+    `.trim();
+    
+    return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgContent);
+}
+
+// Función para configurar el scroll de la descripción (versión mejorada y debuggeada)
+function setupDescriptionScroll() {
+    const descriptionElement = document.getElementById('modalDescription');
+    if (!descriptionElement) {
+        console.warn('Elemento modalDescription no encontrado');
+        return;
+    }
+    
+    console.log('Configurando scroll para descripción de', descriptionElement.textContent.length, 'caracteres');
+    
+    // Limpiar indicadores previos
+    cleanupScrollIndicators();
+    
+    // Configurar estilos base para scroll sin afectar imágenes
+    descriptionElement.style.overflowY = 'auto';
+    descriptionElement.style.maxHeight = '180px';
+    descriptionElement.style.paddingRight = '8px';
+    descriptionElement.style.scrollbarWidth = 'thin';
+    
+    // Verificar si el contenido se desborda y necesita scroll
+    const needsScroll = descriptionElement.scrollHeight > descriptionElement.clientHeight;
+    console.log('¿Necesita scroll?', needsScroll, '- ScrollHeight:', descriptionElement.scrollHeight, 'ClientHeight:', descriptionElement.clientHeight);
+    
+    if (needsScroll) {
+        // Buscar o crear contenedor para indicadores
+        const modalDetails = descriptionElement.parentElement;
+        let indicatorContainer = modalDetails.querySelector('.scroll-indicator-container');
+        
+        if (!indicatorContainer) {
+            indicatorContainer = document.createElement('div');
+            indicatorContainer.className = 'scroll-indicator-container';
+            indicatorContainer.style.cssText = `
+                position: relative;
+                margin-top: 8px;
+                text-align: center;
+                pointer-events: none;
+            `;
+            modalDetails.appendChild(indicatorContainer);
+        }
+        
+        // Crear indicador de scroll
+        const scrollIndicator = document.createElement('div');
+        scrollIndicator.className = 'scroll-indicator';
+        scrollIndicator.innerHTML = '⬇️ Desliza para ver más';
+        scrollIndicator.style.cssText = `
+            font-size: 12px;
+            color: #666;
+            background: rgba(0, 0, 0, 0.05);
+            padding: 4px 8px;
+            border-radius: 12px;
+            display: inline-block;
+            animation: pulseScroll 2s infinite;
+            transition: opacity 0.3s ease;
+            user-select: none;
+        `;
+        
+        // Agregar estilos CSS una sola vez
+        addScrollStyles();
+        
+        indicatorContainer.appendChild(scrollIndicator);
+        
+        // Agregar clase para estilos CSS
+        descriptionElement.classList.add('modal-description');
+        
+        // Manejar eventos de scroll
+        const handleScroll = () => {
+            const isNearBottom = descriptionElement.scrollTop + descriptionElement.clientHeight >= descriptionElement.scrollHeight - 10;
+            
+            if (isNearBottom) {
+                scrollIndicator.style.opacity = '0.3';
+                scrollIndicator.innerHTML = '✅ Contenido completo leído';
+            } else {
+                scrollIndicator.style.opacity = '1';
+                scrollIndicator.innerHTML = '⬇️ Desliza para ver más';
+            }
+        };
+        
+        descriptionElement.addEventListener('scroll', handleScroll);
+        
+        // Guardar referencia para limpieza posterior
+        descriptionElement._scrollHandler = handleScroll;
+        
+        console.log('Scroll configurado exitosamente');
+    } else {
+        console.log('No se necesita scroll, descripción cabe en el espacio disponible');
+    }
+}
+
+// Función separada para agregar estilos (evita duplicación)
+function addScrollStyles() {
+    if (document.querySelector('#scrollIndicatorStyle')) {
+        return; // Ya existe
+    }
+    
+    const style = document.createElement('style');
+    style.id = 'scrollIndicatorStyle';
+    style.textContent = `
+        @keyframes pulseScroll {
+            0%, 100% { opacity: 0.6; transform: translateY(0); }
+            50% { opacity: 1; transform: translateY(2px); }
+        }
+        
+        .modal-description::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        .modal-description::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 3px;
+        }
+        
+        .modal-description::-webkit-scrollbar-thumb {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 3px;
+        }
+        
+        .modal-description::-webkit-scrollbar-thumb:hover {
+            background: rgba(0, 0, 0, 0.5);
+        }
+        
+        .local-placeholder {
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+        
+        .local-placeholder:hover {
+            opacity: 1;
+        }
+    `;
+    document.head.appendChild(style);
+}
+
+// Función para limpiar indicadores de scroll (mejorada)
+function cleanupScrollIndicators() {
+    // Limpiar indicadores existentes
+    const indicators = document.querySelectorAll('.scroll-indicator-container');
+    indicators.forEach(indicator => {
+        if (indicator.parentNode) {
+            indicator.parentNode.removeChild(indicator);
+        }
+    });
+    
+    // Limpiar event listeners de scroll
+    const descriptionElement = document.getElementById('modalDescription');
+    if (descriptionElement && descriptionElement._scrollHandler) {
+        descriptionElement.removeEventListener('scroll', descriptionElement._scrollHandler);
+        descriptionElement._scrollHandler = null;
+        descriptionElement.classList.remove('modal-description');
+    }
+}
+
+function closeModal() {
+    console.log('Cerrando modal y limpiando recursos');
+    
+    // Limpiar indicadores de scroll
+    cleanupScrollIndicators();
+    
+    document.getElementById('productModal').style.display = 'none';
+    document.body.style.overflow = 'auto';
+    currentModalProduct = null;
+}
+
+function addToCartFromModal() {
+    if (!currentModalProduct) return;
+    
+    const nombre = currentModalProduct.Nombre || 'Producto sin nombre';
+    const precio = extractPrice(currentModalProduct.Precio || '0');
+    
+    addToCart(nombre, precio);
+    closeModal();
+}
+
+function contactWhatsAppFromModal() {
+    if (!currentModalProduct) return;
+    
+    const nombre = currentModalProduct.Nombre || 'Producto sin nombre';
+    const precio = extractPrice(currentModalProduct.Precio || '0');
+    
+    const message = encodeURIComponent(
+        `Hola! Me interesa este producto:\n\n` +
+        `🌟 ${nombre}\n` +
+        `💰 ${precio.toLocaleString('es-CO')} COP\n\n` +
+        `¿Podrían darme más información?`
+    );
+    
+    window.open(`https://wa.me/573001234567?text=${message}`, '_blank');
+}
+
+// Función para configurar el zoom de imagen (sin cambios)
+function setupImageZoom(imageElement) {
+    let isZoomedIn = false;
+    let zoomOverlay = null;
+    
+    imageElement.addEventListener('click', function(e) {
+        e.stopPropagation();
+        
+        if (!isZoomedIn) {
+            // Crear overlay de zoom
+            zoomOverlay = document.createElement('div');
+            zoomOverlay.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background: rgba(0, 0, 0, 0.9);
+                z-index: 10001;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: zoom-out;
+            `;
+            
+            // Crear imagen ampliada
+            const zoomedImage = document.createElement('img');
+            zoomedImage.src = imageElement.src;
+            zoomedImage.alt = imageElement.alt;
+            zoomedImage.style.cssText = `
+                max-width: 90%;
+                max-height: 90%;
+                object-fit: contain;
+                border-radius: 8px;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            `;
+            
+            // Crear botón de cerrar
+            const closeButton = document.createElement('button');
+            closeButton.innerHTML = '×';
+            closeButton.style.cssText = `
+                position: absolute;
+                top: 20px;
+                right: 30px;
+                background: rgba(255, 255, 255, 0.2);
+                border: 2px solid rgba(255, 255, 255, 0.3);
+                color: white;
+                font-size: 40px;
+                font-weight: bold;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s ease;
+                backdrop-filter: blur(10px);
+            `;
+            
+            // Crear ícono de lupa
+            const magnifyIcon = document.createElement('div');
+            magnifyIcon.innerHTML = '🔍';
+            magnifyIcon.style.cssText = `
+                position: absolute;
+                top: 20px;
+                left: 30px;
+                background: rgba(255, 255, 255, 0.2);
+                border: 2px solid rgba(255, 255, 255, 0.3);
+                color: white;
+                font-size: 20px;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                backdrop-filter: blur(10px);
+            `;
+            
+            // Eventos para cerrar
+            const closeZoom = () => {
+                if (zoomOverlay && zoomOverlay.parentNode) {
+                    zoomOverlay.parentNode.removeChild(zoomOverlay);
+                    isZoomedIn = false;
+                    zoomOverlay = null;
+                }
+            };
+            
+            closeButton.addEventListener('click', closeZoom);
+            zoomOverlay.addEventListener('click', function(e) {
+                if (e.target === zoomOverlay) {
+                    closeZoom();
+                }
+            });
+            
+            // Cerrar con Escape
+            const escapeHandler = (e) => {
+                if (e.key === 'Escape') {
+                    closeZoom();
+                    document.removeEventListener('keydown', escapeHandler);
+                }
+            };
+            document.addEventListener('keydown', escapeHandler);
+            
+            // Agregar elementos al overlay
+            zoomOverlay.appendChild(zoomedImage);
+            zoomOverlay.appendChild(closeButton);
+            zoomOverlay.appendChild(magnifyIcon);
+            
+            // Agregar al DOM
+            document.body.appendChild(zoomOverlay);
+            isZoomedIn = true;
+            
+            // Animación de entrada
+            zoomOverlay.style.opacity = '0';
+            zoomedImage.style.transform = 'scale(0.5)';
+            
+            setTimeout(() => {
+                zoomOverlay.style.transition = 'opacity 0.3s ease';
+                zoomedImage.style.transition = 'transform 0.3s ease';
+                zoomOverlay.style.opacity = '1';
+                zoomedImage.style.transform = 'scale(1)';
+            }, 10);
+        }
+    });
+}
+
+// Event listeners (sin cambios)
+window.onclick = function(event) {
+    const modal = document.getElementById('productModal');
+    if (event.target === modal) {
+        closeModal();
+    }
+}
+
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeModal();
+    }
+});
+
+// Función adicional para validar y limpiar datos antes de procesar
+function validateImageData(products) {
+    return products.map(product => {
+        // Limpiar datos de imagen problemáticos
+        if (product.Imagen && (
+            product.Imagen === '666666' || 
+            product.Imagen === '999999' || 
+            /^\d+$/.test(product.Imagen.toString().trim())
+        )) {
+            console.warn(`Imagen inválida detectada para ${product.Nombre}:`, product.Imagen);
+            product.Imagen = ''; // Limpiar imagen inválida
+        }
+        return product;
+    });
+}
+
+
+        // Extraer precio numérico
+        function extractPrice(priceString) {
+            if (!priceString) return 0;
+            const cleaned = priceString.toString().replace(/[^\d]/g, '');
+            return parseInt(cleaned) || 0;
+        }
+
+        // Configurar event listeners
+        function setupEventListeners() {
+            // Búsqueda
+            searchInput.addEventListener('input', debounce(handleSearch, 300));
+            
+            // Filtros
+            document.getElementById('disponibilidad').addEventListener('change', applyFilters);
+            document.getElementById('precio').addEventListener('change', applyFilters);
+            document.getElementById('ordenar').addEventListener('change', applyFilters);
+        }
+
+        // Manejar búsqueda
+        function handleSearch() {
+            const searchTerm = searchInput.value.toLowerCase().trim();
+            
+            if (searchTerm === '') {
+                filteredProducts = [...allProducts];
+            } else {
+                filteredProducts = allProducts.filter(product => 
+                    product.Nombre.toLowerCase().includes(searchTerm) ||
+                    (product.Descripción && product.Descripción.toLowerCase().includes(searchTerm))
+                );
+            }
+            
+            applyFilters();
+        }
+
+        // Aplicar filtros
+        function applyFilters() {
+            let filtered = [...filteredProducts];
+            
+            // Filtro por precio
+            const precioFilter = document.getElementById('precio').value;
+            if (precioFilter) {
+                filtered = filtered.filter(product => {
+                    const precio = extractPrice(product.Precio);
+                    switch (precioFilter) {
+                        case 'menor': return precio < 90000;
+                        case 'medio': return precio >= 90000 && precio <= 95000;
+                        case 'mayor': return precio > 95000;
+                        default: return true;
+                    }
+                });
+            }
+            
+            // Ordenar
+            const ordenFilter = document.getElementById('ordenar').value;
+            switch (ordenFilter) {
+                case 'nombre':
+                    filtered.sort((a, b) => a.Nombre.localeCompare(b.Nombre));
+                    break;
+                case 'precio-menor':
+                    filtered.sort((a, b) => extractPrice(a.Precio) - extractPrice(b.Precio));
+                    break;
+                case 'precio-mayor':
+                    filtered.sort((a, b) => extractPrice(b.Precio) - extractPrice(a.Precio));
+                    break;
+            }
+            
+            renderProducts(filtered);
+            updateProductCount(filtered.length);
+        }
+
+        // Funciones de utilidad
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        function hideLoading() {
+            loading.style.display = 'none';
+            container.style.display = 'grid';
+        }
+
+        function showNoResults() {
+            container.style.display = 'none';
+            noResults.style.display = 'block';
+        }
+
+        function hideNoResults() {
+            noResults.style.display = 'none';
+            container.style.display = 'grid';
+        }
+
+        function updateProductCount(count = filteredProducts.length) {
+            productCount.textContent = `${count} productos`;
+        }
+
+        function showError(message) {
+            loading.innerHTML = `<i class="fas fa-exclamation-triangle"></i> ${message}`;
+        }
+
+        // Funciones del carrito
+        function addToCart(productName, price) {
+            cart.push({
+                name: productName,
+                price: price,
+                id: Date.now()
+            });
+            
+            updateCartCount();
+            showNotification(`${productName} agregado al carrito!`);
+        }
+
+        function updateCartCount() {
+            document.querySelector('.cart-count').textContent = cart.length;
+        }
+
+        function showCart() {
+            if (cart.length === 0) {
+                alert('El carrito está vacío');
+                return;
+            }
+            
+            let cartContent = 'Productos en el carrito:\n\n';
+            let total = 0;
+            
+            cart.forEach((item, index) => {
+                cartContent += `${index + 1}. ${item.name} - $${item.price.toLocaleString('es-CO')} COP\n`;
+                total += item.price;
+            });
+            
+            cartContent += `\nTotal: $${total.toLocaleString('es-CO')} COP`;
+            
+            if (confirm(cartContent + '\n\n¿Deseas contactarnos por WhatsApp para finalizar la compra?')) {
+                const message = encodeURIComponent(`Hola! Me interesan estos productos:\n${cartContent}`);
+                window.open(`https://wa.me/573001234567?text=${message}`, '_blank');
+            }
+        }
+
+        function showNotification(message) {
+            // Crear notificación toast
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: #2ecc71;
+                color: white;
+                padding: 1rem 2rem;
+                border-radius: 8px;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+                z-index: 10000;
+                font-weight: 500;
+                transform: translateX(100%);
+                transition: transform 0.3s ease;
+            `;
+            notification.textContent = message;
+            
+            document.body.appendChild(notification);
+            
+            // Mostrar notificación
+            setTimeout(() => {
+                notification.style.transform = 'translateX(0)';
+            }, 100);
+            
+            // Ocultar después de 3 segundos
+            setTimeout(() => {
+                notification.style.transform = 'translateX(100%)';
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 300);
+            }, 3000);
+        }
+
+
+        function handleImageError(imgElement, originalSrc) {
+            console.warn('Error cargando imagen:', originalSrc);
+            
+            // Lista de imágenes de respaldo
+            const fallbackImages = [
+                'https://via.placeholder.com/300x300/f0f0f0/666666?text=Imagen+No+Disponible',
+                'https://via.placeholder.com/300x300/e0e0e0/999999?text=Sin+Imagen',
+                'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjBmMGYwIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNiIgZmlsbD0iIzk5OTk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkltYWdlbiBObyBEaXNwb25pYmxlPC90ZXh0Pjwvc3ZnPg=='
+            ];
+            
+            // Evitar bucle infinito
+            if (imgElement.dataset.fallbackIndex) {
+                const index = parseInt(imgElement.dataset.fallbackIndex);
+                if (index < fallbackImages.length - 1) {
+                    imgElement.dataset.fallbackIndex = (index + 1).toString();
+                    imgElement.src = fallbackImages[index + 1];
+                }
+            } else {
+                imgElement.dataset.fallbackIndex = '0';
+                imgElement.src = fallbackImages[0];
+            }
+        }
+
+        // Navegación suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+

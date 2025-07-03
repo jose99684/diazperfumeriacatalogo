@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Productos</title>
+</head>
+<body>
+    <h1>Formulario de Perfumes</h1>
+
+    <form id="formProducto">
+        <label>Nombre:</label><br>
+        <input type="text" name="nombre" required><br><br>
+
+        <label>Descripción:</label><br>
+        <textarea name="descripcion" required></textarea><br><br>
+
+        <label>Precio:</label><br>
+        <input type="number" name="precio" required><br><br>
+
+        <label>Imagen (URL):</label><br>
+        <input type="url" name="imagenUrl"><br><br>
+
+        <label>O cargar imagen local:</label><br>
+        <input type="file" name="imagenLocal" accept="image/*"><br><br>
+
+        <label>¿Es original?</label><br>
+        <input type="checkbox" name="original"><br><br>
+
+        <label>Notas de Salida:</label><br>
+        <input type="text" name="notasSalida"><br><br>
+
+        <label>Notas de Corazón:</label><br>
+        <input type="text" name="notasCorazon"><br><br>
+
+        <label>Notas de Fondo:</label><br>
+        <input type="text" name="notasFondo"><br><br>
+
+        <button type="submit">Guardar producto</button>
+    </form>
+
+    <hr>
+
+    <h2>Cargar productos masivamente (Excel)</h2>
+    <form id="formMasivo" enctype="multipart/form-data">
+        <input type="file" name="archivoExcel" accept=".xlsx, .xls"><br><br>
+        <button type="submit">Cargar Excel</button>
+    </form>
+
+    <script>
+        const form = document.getElementById('formProducto');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+    
+            const data = {
+                nombre: form.nombre.value,
+                descripcion: form.descripcion.value,
+                precio: form.precio.value,
+                imagen: form.imagenUrl.value || form.imagenLocal.files[0]?.name || "",
+                original: form.original.checked,
+                notasSalida: form.notasSalida.value,
+                notasCorazon: form.notasCorazon.value,
+                notasFondo: form.notasFondo.value
+            };
+    
+            fetch("https://script.google.com/macros/s/AKfycbzCEmzqazx5mDZCb0Fv3wSOSEY3Z9-koABgxID_dWKFks8thvdRQbYl7Wr_BuA_msJNvw/exec", {
+                method: "POST",
+                body: JSON.stringify(data),
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            })
+            .then(res => res.text())
+            .then(txt => alert(txt))
+            .catch(err => alert("Error: " + err));
+        });
+    </script>
+    
+</body>
+</html>
