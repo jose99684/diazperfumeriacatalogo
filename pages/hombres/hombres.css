@@ -634,3 +634,364 @@ footer {
         justify-content: center;
     }
 }
+
+
+
+
+@media (max-width: 768px) {
+
+  /* Header y navbar */
+  header {
+    padding: 0.5rem 0;
+  }
+
+  .navbar, .navbar2 {
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .logo-img {
+    height: 80px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  /* Main Content */
+  .main-content {
+    margin-top: 110px;
+    padding: 20px 5%;
+  }
+
+  .page-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .page-subtitle {
+    font-size: 1rem;
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  /* Filter Section */
+  .filter-section {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .filter-group {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .filter-select {
+    width: 100%;
+  }
+
+  /* Products Grid */
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .product-image {
+    height: 250px;
+  }
+
+  .product-info {
+    padding: 20px;
+  }
+
+  .product-name {
+    font-size: 1.2rem;
+  }
+
+  .current-price {
+    font-size: 1.2rem;
+  }
+
+  .original-price {
+    font-size: 0.95rem;
+  }
+
+  .product-description {
+    font-size: 0.85rem;
+  }
+
+  .add-to-cart {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+
+  /* WhatsApp Button */
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+    font-size: 25px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 40px 5% 20px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .social-icons {
+    gap: 15px;
+  }
+
+  .social-icons a {
+    font-size: 20px;
+  }
+
+  /* Cart Items */
+  .cart-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .cart-item-image {
+    margin: 0 0 1rem 0;
+    width: 100px;
+    height: 100px;
+  }
+
+  .cart-item-details {
+    margin: 0 0 1rem 0;
+  }
+
+  .cart-item-controls {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .quantity-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 0.9rem;
+  }
+
+  .quantity-display {
+    min-width: 30px;
+    font-size: 0.95rem;
+  }
+
+  .remove-item {
+    width: 32px;
+    height: 32px;
+    font-size: 0.95rem;
+  }
+
+  .cart-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+
+    /* Header y Navbar */
+    header {
+      padding: 0.5rem 0;
+    }
+  
+    .navbar, .navbar2 {
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px;
+    }
+  
+    .logo-img {
+      height: 80px;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
+  
+    .nav-links a {
+      font-size: 18px;
+    }
+  
+    /* Main Content */
+    .main-content {
+      padding: 1rem;
+    }
+  
+    .page-title {
+      font-size: 2rem;
+      text-align: center;
+    }
+  
+    .page-subtitle {
+      font-size: 1rem;
+      padding: 0 10px;
+      text-align: center;
+    }
+  
+    /* Search & Filter */
+    .search-filter-section {
+      padding: 1.5rem;
+    }
+  
+    .filter-section {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 1rem;
+    }
+  
+    .filter-group {
+      width: 100%;
+      justify-content: space-between;
+    }
+  
+    .filter-select {
+      width: 100%;
+    }
+  
+    .products-count {
+      text-align: center;
+      width: 100%;
+    }
+  
+    /* Products Grid */
+    .products-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  
+    .product-image {
+      height: 220px;
+    }
+  
+    .product-info {
+      padding: 1rem;
+    }
+  
+    .product-name {
+      font-size: 1.1rem;
+    }
+  
+    .current-price {
+      font-size: 1.2rem;
+    }
+  
+    .original-price {
+      font-size: 1rem;
+    }
+  
+    .product-description {
+      font-size: 0.95rem;
+    }
+  
+    .add-to-cart {
+      padding: 0.85rem;
+      font-size: 0.95rem;
+    }
+  
+    /* WhatsApp Float */
+    .whatsapp-float {
+      width: 50px;
+      height: 50px;
+      bottom: 20px;
+      right: 20px;
+      font-size: 24px;
+    }
+  
+    /* Modal */
+    .modal-content {
+      width: 95%;
+      margin: 5% auto;
+    }
+  
+    .modal-body {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      padding: 1.5rem;
+    }
+  
+    .modal-image {
+      height: 250px;
+    }
+  
+    .modal-title {
+      font-size: 1.3rem;
+    }
+  
+    .modal-details h3 {
+      font-size: 1.5rem;
+    }
+  
+    .modal-current-price {
+      font-size: 1.5rem;
+    }
+  
+    .modal-original-price {
+      font-size: 1rem;
+    }
+  
+    .modal-description {
+      max-height: 140px;
+      font-size: 0.95rem;
+    }
+  
+    .modal-actions {
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+  
+    .modal-btn {
+      padding: 0.85rem 1.5rem;
+      font-size: 0.95rem;
+    }
+  
+    /* Footer */
+    footer {
+      padding: 2rem 1rem;
+    }
+  
+    .footer-links {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+  
+    .footer-links a {
+      font-size: 16px;
+    }
+  
+    .social-icons {
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+  
+    .social-icons a {
+      width: 45px;
+      height: 45px;
+      font-size: 20px;
+    }
+  
+    .social-icons a i {
+      font-size: 1.3rem;
+    }
+  
+  }
+  
